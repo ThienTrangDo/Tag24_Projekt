@@ -4,37 +4,34 @@ fun main() {
         "Juli", "August", "September", "Oktober", "November", "Dezember"
     )
 
-    for (i in monate)
-        ergebnis(i)
+    for(monat in monate){
+        println("Der Monat $monat ist im ${ergebnis(monat)}")
+    }
+
+    println()
+
+    for(monat in monate){
+        if(ergebnis(monat) == "Sommer"){
+            println("Der Monat $monat ist im ${ergebnis(monat)}")
+        }
+    }
+
+    println()
+
+    for(monat in monate) {
+        if (monat != "Juni" && monat != "September") {
+            println("Der Monat $monat ist im ${ergebnis(monat)}")
+        }
+    }
 
 }
 
-fun ergebnis(monat: String) {
+fun ergebnis(monat: String): String {
      when (monat) {
-         "Dezember", "Januar", "Februar" -> "Winter"
-         "März", "April", "Mai" -> "Frühling"
-         "Juni", "Juli", "August" -> "Sommer"
-         "September", "Oktober", "November" -> println("Herbst")
+         "Dezember","Januar", "Februar" -> return "Winter"
+         "März", "April", "Mai" -> return "Frühling"
+         "Juni", "Juli", "August" -> return "Sommer"
+         "September", "Oktober", "November" -> return "Herbst"
      }
+    return "Kein Ergebnis"
 }
-
-/*
-b)
-Schreibe jetzt in der main()-Funktion eine Schleife, die alle Monate mit ihrer Jahreszeit in der Konsole ausgibt.
-
-In der Konsole sollte dann folgendes ausgegeben werden:
-Der Januar ist im Winter
-Der Februar ist im Winter
-Der MÃ¤rz ist im FrÃ¼hling
-...
-Der Dezember ist im Winter
-
-c)
-Schreibe zusätzlich eine Schleife deiner Wahl, die nur die Sommermonate in der Konsole ausgibt.
-
-d)
-Schreibe zusätzlich eine Schleife deiner Wahl, die alle Monate außer den Juni und den September ausgibt.
-
-e)
-Schreibe zusätzlich eine Schleife deiner Wahl, die ab dem März jeden zweiten Monat ausgibt.
- */

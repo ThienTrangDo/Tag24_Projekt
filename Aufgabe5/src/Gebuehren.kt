@@ -2,6 +2,7 @@ fun main() {
     val fees = listOf(363.34, 235.45, 753.45, 234.56, 658.33, 22.65, 2623.46, 475.54)
 
     ergebnis(fees)
+    ergebnis2(fees)
 }
 
 fun ergebnis(items: List<Double>) {
@@ -12,6 +13,14 @@ fun ergebnis(items: List<Double>) {
     println(sum)
 }
 
+fun ergebnis2(fees: List<Double>) {
+    var sum: Double = 0.0
+
+    for(fee in fees){
+        sum += fee
+    }
+    println(sum)
+}
 
 /*
 Wir kriegen von unserem Chef eine Liste mit Gebühren, die zu bezahlen sind.
